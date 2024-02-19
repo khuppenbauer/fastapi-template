@@ -1,5 +1,10 @@
 fastapi
 gunicorn
 httptools
+python-jose
+python-multipart
+pydantic
+pydantic_settings
+typing_extensions
 uvicorn
 uvloop
