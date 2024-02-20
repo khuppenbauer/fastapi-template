@@ -1,12 +1,13 @@
 # main.py
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from .routes import token, test
+from .routes import token, test, user
 
 app = FastAPI()
 
-app.include_router(test.router, prefix='/api/test')
 app.include_router(token.router)
+app.include_router(test.router, prefix='/api/test')
+app.include_router(user.router, prefix='/api/user')
 
 app.add_middleware(
   CORSMiddleware,
